@@ -16125,6 +16125,10 @@ textarea {
     margin-bottom: -10px;
   }
 }
+.hero-slider-single-item .custom-title {
+  font-size: min(5vw, 80px);
+  line-height: 0.85;
+}
 .hero-slider-single-item .sub-title {
   font-size: 40px;
   text-transform: uppercase;
