@@ -1,0 +1,17 @@
+/*****************************
+* Component - Client Logo Display
+*****************************/
+.client-logo-slider{
+    .swiper-slide{
+        text-align: center;
+    }
+}
+
+.client-logo-display-single-item{
+    .image{
+        transition: all 0.001s;
+        &:hover{
+            filter: invert(62%) sepia(44%) saturate(4989%) hue-rotate(342deg) brightness(99%) contrast(93%);
+        }
+    }
+}

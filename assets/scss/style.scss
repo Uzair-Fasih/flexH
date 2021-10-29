@@ -1,0 +1,91 @@
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Induste
+    Template Description: Induste - Multipurpose eCommerce HTML Template
+    Version: 1.0
+    Template Author: Jaber Hossain Shovon
+    Template URL: https://hasthemes.com/
+
+-----------------------------------------------------------------------------------
+
+    CSS INDEX
+    ===================
+
+    -> Base - Default
+    -> Base - Button
+
+    -> Component - Hero Slider
+    -> Component - Promo Display
+    -> Component - Service Display
+    -> Component - Working Progress Display
+    -> Component - Counter Display
+    -> Component - Team Display
+    -> Component - Client Logo Display
+    -> Component - Blog Feed Display
+    -> Component - Form
+    -> Component - Breadcrumb
+    -> Component - Comment
+    -> Component - Pagination
+
+    -> Pages - Service
+    -> Pages - Project
+    -> Pages - Error 404
+    -> Pages - Price
+    -> Pages - Blog
+    -> Pages - Contact
+    -> Pages - About
+
+    -> Layout - Header
+    -> Layout - Footer
+    -> Layout - Mobile Layout
+
+
+-----------------------------------------------------------------------------------*/
+
+
+@import "bootstrap/functions";
+@import "base/variables";
+@import "bootstrap/bootstrap";
+
+@import "base/mixins";
+
+
+@import "base/common";
+@import "base/button";
+
+
+/*Component*/
+@import "components/hero-slider";
+@import "components/promo";
+@import "components/about-display";
+@import "components/service-display";
+@import "components/working-process-display";
+@import "components/counter-display";
+@import "components/project-display";
+@import "components/team-display";
+@import "components/testimonilal-display";
+@import "components/client-logo-display";
+@import "components/blog-feed-display";
+@import "components/form";
+@import "components/breadcrumb";
+@import "components/comment";
+@import "components/pagination";
+@import "components/sidebar";
+
+/*Pages*/
+@import "pages/service";
+@import "pages/project";
+@import "pages/404";
+@import "pages/pricing";
+@import "pages/blog";
+@import "pages/contact";
+@import "pages/about";
+
+/*Layout*/
+@import "layout/header";
+@import "layout/footer";
+@import "layout/mobile-menu";
+
+
+@import "base/material-scroll-top";
+@import "base/nice-select";

@@ -1,0 +1,173 @@
+
+/*Hero Slider*/
+.hero-slider-active{
+    .swiper-pagination {
+        bottom: 40px;
+    }
+    .swiper-pagination-bullet {
+        width: 25px;
+        height: 4px;
+        display: inline-block;
+        border-radius: 2px;
+        background: rgba($white, .9);
+        transition: $transition-base;
+        outline: none;
+        opacity: 1;
+        bottom: 40px;
+        &-active{
+            background: $linear-gradient-bg;
+            box-shadow: 1px 1px 10px rgba($black, .3);
+
+        }
+    }
+    .hero-slider-single-item{
+        &.swiper-slide-active{
+            .hero-content{
+                .sup-title{
+                   animation: fadeInDown 1.5s ease .8s 1 backwards;
+                }
+        
+                .title{
+                    animation: fadeInDown 1.2s ease 1.8s 1 backwards;
+                }
+        
+                .sub-title{
+                    animation: fadeInDown 1.2s ease 2.5s 1 backwards;
+                }
+        
+                .btn{
+                    animation: zoomIn .8s ease 3s 1 backwards;
+                }
+            }
+            
+        }
+    }
+
+}
+
+
+/*Default Navigation Style*/
+
+.default-arrow{
+    
+   .default-arrow-style{
+        background: $linear-gradient-bg;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        transition: $transition-base;
+        outline: none;
+        right: -45px;
+        display: none;
+        line-height: 53px;
+        text-align: center;
+        @include breakpoint(medium){
+            display: block;
+        }
+        
+   }
+    .swiper-button-prev{
+        @extend .default-arrow-style;
+        display: none;
+        left: -55px;
+        @include breakpoint(medium){
+            display: block;
+        }
+        @include breakpoint(xlarge){
+            left: -90px;
+        }
+        &::after{
+            color: $white;
+            font-family: 'IcoFont';
+            content: '\ea9d';
+            font-size: 26px;
+        }
+        
+    }
+    .swiper-button-next{
+        @extend .default-arrow-style;
+        right: -55px;
+
+        @include breakpoint(xlarge){
+            right: -90px;
+        }
+        &::after{
+            color: $white;
+            font-family: 'IcoFont';
+            content: '\eaa0';
+            font-size: 26px;
+        }
+    }
+}
+
+.default-slider-item {
+    position: relative;
+    backface-visibility: hidden;
+
+    .image{
+        border-radius: 70px;
+
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .content{
+        position: absolute;
+        width: calc(100% - 50px);
+        height: calc(100% - 50px);
+        border-radius: 50px;
+        background: $color-secondary;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: $transition-base;
+        visibility: hidden;
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        backface-visibility: hidden;
+        padding: 0 20px;
+
+        
+
+        @include breakpoint(small){
+            width: calc(100% - 50px);
+            height: calc(100% - 50px);
+            border-radius: 50px;
+        }
+
+
+        @include breakpoint(large){
+            width: calc(100% - 50px);
+            height: calc(100% - 50px);
+            border-radius: 30px;
+        }
+
+        @include breakpoint(xlarge){
+            width: calc(100% - 50px);
+            height: calc(100% - 50px);
+            border-radius: 50px;
+        }
+
+        @include breakpoint(xlarge){
+            width: calc(100% - 70px);
+            height: calc(100% - 70px);
+            border-radius: 50px;
+        }
+
+        @include breakpoint(xxxlarge){
+            width: calc(100% - 100px);
+            height: calc(100% - 100px);
+            border-radius: 70px;
+        }
+    }
+
+    &:hover .content{
+        visibility: visible;
+        opacity: 1;
+    }
+}

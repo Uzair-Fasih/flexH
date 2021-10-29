@@ -1,0 +1,18 @@
+.tag-link {
+    margin-bottom: -10px;
+    a {
+        margin-right: 10px;
+        padding: 5px 15px;
+        margin-bottom: 10px;
+        border-radius: 15px;
+        background: #f7e8d9;
+        text-align: center;
+        display: inline-block;
+        transition: $transition-base;
+        &:hover{
+            background: #f7d7b6;
+            color: $color-bold-red;
+        }
+    }
+}
+

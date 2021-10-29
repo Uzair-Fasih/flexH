@@ -1,0 +1,92 @@
+/*****************************
+* Component - Breadcrumb
+*****************************/
+.breadcrumb-wrapper{
+    position: relative;
+    z-index: 12;
+    .image{
+        width: 100%;
+        height: 350px;
+
+
+        @include breakpoint(large){
+            height: 400px;
+        }
+        @include breakpoint(xlarge){
+            height: auto;
+        }
+    }
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .content{
+        position: absolute;
+        top: calc(50% + 70px);
+        transform: translateY(-50%);
+
+        .title{
+            font-size: 50px;
+            color: $white;
+            text-transform: uppercase;
+
+            @include breakpoint(xlarge){
+                font-size: 60px;
+            }
+            @include breakpoint(xxlarge){
+                font-size: 70px;
+            }
+            @include breakpoint(xxxlarge){
+                font-size: 80px;
+            }
+        }
+    }
+    
+}
+
+.breadcrumb-link{
+    display: flex;
+    position: relative;
+    padding-left: 20px;
+    &::after{
+        position: absolute;
+        content: "";
+        width: 25px;
+        height: 4px;
+        background: $white;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+    }
+
+    li{
+        position: relative;
+        font-size: 15px;
+        color: $white;
+        padding-left: 25px;
+        font-weight: 500;
+        text-transform: uppercase;
+        &::before{
+            position: absolute;
+            content: "-";
+            top: 50%;
+            transform: translateY(-50%);
+            color: $white;
+            left: calc(100% + 10px);
+            display: block;
+        }
+
+        &:last-child{
+            &::before{
+                display: none;
+            }
+        }
+    }
+
+    a{
+        color: $white;
+    }
+}

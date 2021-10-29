@@ -1,0 +1,24 @@
+/*****************************
+* Component - Team Display
+*****************************/
+.team-display-single-item{
+    .content{
+        .title{
+            font-size: 30px;
+            color: $white;
+            margin-bottom: 10px;
+
+            @include breakpoint(xlarge){
+                font-size: 35px;
+            }
+        }
+
+        .title-tag{
+            font-size: 12px;
+            font-weight: 600;
+            color: #fe8403;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+    }
+}

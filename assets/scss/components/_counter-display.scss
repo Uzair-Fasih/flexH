@@ -1,0 +1,143 @@
+/*****************************
+* Component - Counter Display
+*****************************/
+
+.counter-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: -50px;
+    @include breakpoint(small){
+        flex-direction: row;
+    }
+
+    .separator {
+        position: absolute;
+        content: "";
+        height: 180px;
+        width: 1px;
+        background: $border-color;
+        display: none;
+        @include breakpoint(small){
+            display: block;
+            left: 29.333%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        
+        
+        @include breakpoint(medium) {
+            
+            left: 29.333%;
+        }        
+        @include breakpoint(large) {
+            top: -50%;
+            transform: translateY(0%);
+            left: 31.333%;
+        }
+
+        @include breakpoint(xlarge) {
+            left: 30.333%;
+        }
+        
+        @include breakpoint(xlarge) {
+            left: 29.5%;
+        }
+
+        &:last-child {
+            left: 69.333%;
+
+            @include breakpoint(medium) {
+                    left: 70.5%;
+            }
+
+            @include breakpoint(large) {
+                left: 68.333%;
+            }
+
+            @include breakpoint(xlarge) {
+                left: 69.6%;
+            }
+            @include breakpoint(xxlarge) {
+                left: 70.3%;
+            }
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 1px;
+            background: #fe8403;
+            right: 0%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+    }
+
+}
+
+.counter-single-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+    text-align: center;
+    width: 100%;
+    @include breakpoint(small) {
+        margin-bottom: 0px;
+        width: 20%;
+    }
+    
+    @include breakpoint(medium) {
+        width: 18%;
+    }
+
+    @include breakpoint(large) {
+        align-items: flex-start;
+        flex-direction: row;
+        text-align: left;
+        width: 26%;
+    }
+    @include breakpoint(xlarge) {
+        width: 22%;
+    }
+    @include breakpoint(xxlarge) {
+        width: 20%;
+    }
+
+    .icon {
+        width: 70px;
+        height: 70px;
+        border: 1px solid $border-color;
+        border-radius: 15px;
+        text-align: center;
+        line-height: 70px;
+        margin-right: 0px;
+        margin-bottom: 30px;
+
+        @include breakpoint(large) {
+            margin-right: 50px;
+            margin-bottom: 0;
+        }
+    }
+
+
+
+    .content {
+        
+        .number {
+            font-size: 65px;
+            color: $color-dark-red;
+            margin-top: -12px;
+        }
+
+        .text {
+            color: #6c6c6c;
+        }
+    }
+
+}

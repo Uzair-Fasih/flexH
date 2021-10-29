@@ -1,0 +1,107 @@
+.p-tb-100{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include breakpoint(medium){
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    @include breakpoint(large){
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+}
+.p-t-100{
+    padding-top: 60px;
+    
+    @include breakpoint(medium){
+        padding-top: 80px;
+        
+    }
+    @include breakpoint(large){
+        padding-top: 100px;
+        
+    }
+}
+.p-b-160{
+    padding-bottom: 80px;
+    @include breakpoint(small){
+        padding-bottom: 100px;
+        
+    }
+    @include breakpoint(medium){
+        padding-bottom: 120px;
+        
+    }
+    @include breakpoint(large){
+        padding-bottom: 160px;
+    }
+}
+
+.p-tb-70{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.p-t-70{
+    padding-top: 60px;
+}
+
+.m-tb-70{
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.m-t-70{
+    margin-top: 60px;
+}
+
+.m-b-70{
+    margin-bottom: 60px;
+}
+
+
+.icon-space-left{
+    i{padding-left: 10px;}
+}
+.icon-space-right{
+    i{padding-right: 10px;}
+}
+
+
+.review-star{
+    li{
+        display: inline-block;
+        font-size: 15px;
+        letter-spacing: 0.15em;
+        &.empty{color: #e1e1e1}
+    }
+}
+
+.img-responsive{
+    img{width: 100%;}
+}
+
+.pos-relative{
+    position: relative;
+}
+
+.pos-absolute{
+    position: absolute;
+}
+
+.img-hover-zoom{
+    overflow: hidden;
+    img{
+        transform: scale(1);
+        transition: $transition-base;
+        &:hover{
+            transform: scale(1.03);
+        }
+    }
+}
+
+
+.nice-select .list{
+    left: auto;
+    right: 0;
+}

@@ -1,0 +1,124 @@
+/*****************************
+* Component - Blog Feed Display
+*****************************/
+.blog-feed-slider {
+    padding-left: 0;
+    margin-bottom: -30px;
+    @include breakpoint(xxxlarge) {
+        padding-left: 22px;
+    }
+}
+
+.blog-feed-slider-single-item {
+    .image {
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .content {
+        margin-top: 35px;
+        padding: 28px 28px;
+        border-radius: 35px;
+        background: $color-gray-white;
+
+        @include breakpoint(medium) {
+            padding: 18px 18px;
+        }
+        @include breakpoint(large) {
+            padding: 35px 30px;
+        }
+        @include breakpoint(xlarge) {
+            padding: 35px 50px;
+        }
+
+        .blog-meta {
+            margin-bottom: -20px;
+        }
+
+        .title {
+            margin-top: 25px;
+            margin-bottom: 20px;
+            font-size: 26px;
+
+            @include breakpoint(medium){
+                font-size: 30px;
+            }
+
+            a {
+                color: $color-dark-red;
+
+                &:hover {
+                    color: $color-dark-orange;
+                }
+            }
+        }
+    }
+}
+
+
+.meta-box {
+
+    & > li{
+        margin-right: 10px;
+        padding: 7.5px 9px;
+        margin-bottom: 20px;
+        border-radius: 15px;
+        background: #f7e8d9;
+        text-align: center;
+        display: inline-block;
+        transition: $transition-base;
+
+        &:hover {
+            background: #f7d7b6;
+        }
+
+        @include breakpoint(large){
+            margin-right: 15px;
+            padding: 7.5px 17px;
+        }
+
+        @include breakpoint(xlarge){
+            margin-right: 15px;
+            padding: 7.5px 20px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        .title{
+            font-weight: 600;
+            color: $color-dark-red;
+            padding-right: 5px;
+        }
+
+        a {color: #757575;}
+
+        i { color: $color-dark-orange;}
+    }
+
+    .list-item{
+        display: inline;
+        li{
+            display: inline;
+            margin-right: 8px;
+            transition: $transition-base;
+            &:last-child{margin-right: 0;}
+
+            a, i {
+                color: #757575;
+                &:hover{
+                    color: $color-dark-red;
+                }
+            }
+        }
+    }
+   
+}
+
+.meta-box-content{
+    display: i;
+}

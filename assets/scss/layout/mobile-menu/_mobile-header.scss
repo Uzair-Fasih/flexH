@@ -1,0 +1,18 @@
+/*****************************
+* Layout - Header
+*****************************/
+.mobile-header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    background: rgba($color-dark-red, .05);
+    padding: 20px 0;
+}
+
+.mobile-action-link{
+    font-size: 24px;
+    
+    a{color: $white;}
+}

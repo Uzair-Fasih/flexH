@@ -1,0 +1,66 @@
+/*****************************
+* Layout - Offcanvas
+*****************************/
+.offcanvas {
+    z-index: 999999;
+    position: fixed;
+    top: 0;
+    overflow: auto;
+    height: 100vh;
+    padding: 20px;
+    transition: $transition-base;
+    transform: translateX(100%);
+    box-shadow: none;
+    background: $color-dark-red;
+    width: 300px;
+    overflow-x: hidden;
+    @include breakpoint(small){
+        width: 400px;
+    }
+}
+
+
+.offcanvas-leftside{
+    left: 0%;
+    transform: translateX(-100%);
+}
+
+.offcanvas-rightside{ 
+    right: 0%;
+    transform: translateX(100%);
+}
+
+.offcanvas.offcanvas-open{
+    transform: translateX(0);
+}
+
+.offcanvas-overlay{
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    background-color: rgba($black, 0.5);
+}
+
+.offcanvas-header{
+    margin-bottom: 30px;
+}
+
+.offcanvas-close{
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    line-height: 38px;
+    text-align: center;
+    border-radius: 50%;
+    transition: $transition-base;
+    color: $white;
+}
+
+.offcanvas-title {
+    margin-bottom: 40px;
+}
+

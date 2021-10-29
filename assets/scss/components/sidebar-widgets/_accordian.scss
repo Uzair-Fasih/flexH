@@ -1,0 +1,50 @@
+.sidebar-menu{
+    li{
+        margin-bottom: 14px;
+        &:last-child{margin-bottom: 0;}
+    }
+
+    li a{
+        font-weight: 700;
+        color:  $color-dark-red;
+        &:hover{color: $color-dark-orange;}
+    }
+
+}
+
+.accordion-title{
+    color: $color-dark-red;
+    font-weight: 700;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    
+}
+
+.accordion-title{
+    position: relative;
+}
+
+.collapsed.accordion-title i{
+    transform: rotate(0deg);
+    transform-origin: center;
+    
+}
+.accordion-title i{
+    transform: rotate(90deg);
+    transition: $transition-base;
+    line-height: 1.6;
+    font-size: 22px;
+}
+
+
+.accordion-category-list{
+    li{
+        margin-top: 7px;
+        margin-bottom: 7px;
+        padding-left: 10px;
+    }
+
+    li a{color: $body-color;}
+}

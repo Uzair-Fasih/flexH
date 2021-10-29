@@ -1,0 +1,107 @@
+/*****************************
+* Pages - Project
+*****************************/
+
+.projects-gallery-filter-nav{
+    .btn{
+        margin-right: 15px;
+        margin-bottom: 20px;
+
+        @include breakpoint(small){
+            margin-right: 40px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .btn-outline-secondary{
+        padding: 8px 20px;
+
+        @include breakpoint(small){
+            padding: 8px 30px;
+        }
+    }
+}
+
+
+.project-box-wrapper{
+    margin-bottom: 60px;
+    &:last-child{
+        margin-bottom: 0;
+    }
+    .image{
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        img{
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+.project-content-box{
+    background: $color-gray-white;
+    padding: 50px 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+    @include breakpoint(medium){
+        padding: 50px 40px;
+    }
+    @include breakpoint(large){
+        padding: 50px 60px;
+    }
+}
+
+.project-info{
+    margin-bottom: 40px;
+    .title-info{
+        position: relative;
+        font-weight: 600;
+        font-size: 18px;
+        color: $color-dark-red;
+        padding-right: 100px;
+        width: 30%; 
+        
+        @include breakpoint(small){
+            width: 35%; 
+        } 
+        @include breakpoint(medium){
+            width: 30%; 
+        } 
+        @include breakpoint(large){
+            width: 45%; 
+        } 
+        @include breakpoint(xxlarge){
+            width: 30%; 
+        } 
+
+        &::after{
+            position: absolute;
+            content: "-";
+            top: 0;
+            right: 40px;
+            visibility: hidden;
+            @include breakpoint(small){
+                visibility: visible;
+            }
+        }
+    }
+    
+    .info-details{
+        width: auto;
+    }
+
+    li{
+        font-size: 15px;
+        display: flex;
+        margin-bottom: 7px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}

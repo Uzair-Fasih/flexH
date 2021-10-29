@@ -1,0 +1,85 @@
+/*****************************
+* Layout - Offcanvas Menu
+*****************************/
+/*Mobile Menu Bottom Area*/
+.offcanvas-menu {
+    margin: 20px 0;
+}
+
+.offcanvas-menu li {
+    position: relative;
+    padding: 7px 5px;
+}
+
+.offcanvas-menu>ul>li {
+    border-bottom: 1px solid transparent;
+}
+
+.offcanvas-menu>ul>li:last-child {
+    border-bottom: none;
+}
+
+.offcanvas-menu li a {
+    display: block;
+    color: $white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.offcanvas-menu li a:hover {
+    color: $white;
+}
+
+.offcanvas-menu li .mobile-sub-menu {
+    display: none;
+}
+
+.offcanvas-menu-expand::after {
+    content: "\eaa0";
+    position: absolute;
+    font-family: 'IcoFont';
+    right: 0;
+    transition: all 0.3s ease;
+    color: $white;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.offcanvas-menu .active>.offcanvas-menu-expand:last-child,
+.sub-menu>.active .offcanvas-menu-expand:last-child {
+    border-bottom: none;
+}
+
+.offcanvas-menu .active>.offcanvas-menu-expand::after,
+.sub-menu>.active .offcanvas-menu-expand::after {
+    color: $white;
+    transform: rotate(90deg);
+}
+
+
+/*Mobile Address*/
+.mobile-contact-info {
+    .address span {
+        display: block;
+        color: $white;
+    }
+}
+
+.mobile-social-link {
+    margin-top: 20px;
+    text-align: center;
+
+    a {
+        color: $white;
+        margin-right: 30px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.mobile-contact-info{
+    display: flex;
+    justify-content: center;
+}

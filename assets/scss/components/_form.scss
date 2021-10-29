@@ -1,0 +1,46 @@
+/*****************************
+* Component - Form
+*****************************/
+
+.form-group-single-item {
+    position: relative;
+
+    input, textarea {
+        background: $white;
+        border-radius: 10px;
+        padding: 15px 30px;
+        position: relative;
+        border:  1px solid transparent;
+        transition: $transition-base;
+        outline: none;
+        &::placeholder {
+            color: #757575;
+            background-image: url('images/some-red-star.png') no-repeat;
+        }
+
+        &:focus{
+            border-color: #fe8403;
+        }
+    }
+
+    label {
+        position: absolute;
+        left: 30px;
+        top: 15px;
+        z-index: 1;
+        color: #757575;
+        font-size: 15px;
+
+        &::after {
+            content: "*";
+            color: #fe8403;
+            padding-left: 5px;
+        }
+    }
+
+    &-inner-bg{
+        input, textarea{
+        background: $color-gray-white;
+        }
+    }
+}

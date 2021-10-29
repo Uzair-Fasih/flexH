@@ -1,0 +1,146 @@
+.footer-center {
+    padding-bottom: 89px;
+
+    @include breakpoint(medium) {
+        padding-bottom: 109px;
+    }
+    @include breakpoint(xlarge) {
+        padding-bottom: 335px;
+    }
+
+    margin-bottom: -60px;
+}
+
+
+.footer-widget-single-item {
+    margin-bottom: 60px;
+    @include breakpoint(xlarge) {
+        margin-bottom: 0px;
+    }
+
+    .title {
+        font-size: 35px;
+        font-weight: 500;
+        color: $white;
+        margin-bottom: 47px;
+        text-transform: uppercase;
+    }
+}
+
+/*Footer About*/
+.footer-about {
+    margin-top: -10px;
+    font-size: 15px;
+
+    li {
+        margin-bottom: 6px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .text,
+    .text a {
+        color: #cbcbcb;
+    }
+
+    .text-marker {
+        color: #fe8403;
+        margin-right: 10px;
+    }
+
+}
+
+
+/*Footer Recent Blog*/
+.footer-blog {
+
+    li {
+        display: flex;
+        align-items: flex-start;
+        border-bottom: 1px solid #392120;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        &:first-child {
+            padding-top: 0;
+        }
+
+
+    }
+
+    .content {
+        margin-left: 20px;
+        margin-top: -10px;
+        width: 100%;
+
+        @include breakpoint(medium){
+            width: 210px;
+        }
+        @include breakpoint(medium){
+            width: 210px;
+        }
+        @include breakpoint(xlarge){
+            width: 210px;
+        }
+    }
+
+    .image {
+        width: 44px;
+        height: 44px;
+        overflow: hidden;
+        display: inline-block;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .title {
+        font-size: 14px;
+        font-weight: 400;
+        transition: $transition-base;
+        color: #cbcbcb;
+
+        &:hover {
+            color: #fe8403;
+        }
+    }
+
+    .date {
+        display: block;
+        color: #fe8403;
+        margin-top: 7px;
+    }
+
+}
+
+
+/*Footer Navigation*/
+.footer-nav {
+    margin-top: -10px;
+
+    a {
+        position: relative;
+        display: inline-block;
+        color: #cbcbcb;
+        margin-bottom: 12px;
+        padding-left: 33px;
+
+        &::before {
+            position: absolute;
+            content: "\ea94";
+            font-family: 'IcoFont';
+            font-size: 17px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &:hover {
+            color: #fe8403;
+        }
+    }
+}

@@ -1,0 +1,136 @@
+/*****************************
+* Component - Service Display
+*****************************/
+
+.service-display-wrapper{
+
+    .col-12{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: -40px;
+    }
+
+    .service-plus-icon-seperator{
+        position: relative;
+
+                
+        &::before{
+            position: absolute;
+            content: "";
+            width: 30px;
+            height: 1px;
+            background: $border-color;
+            top: calc(50% - 20px);
+            left: 50%;
+            transform: translateX(-50%);
+            display: none;
+            @include breakpoint(small){
+                display: block;
+            }
+        }
+        &::after{
+            position: absolute;
+            content: "";
+            width: 1px;
+            height: 30px;
+            background: $border-color;
+            top: calc(50% - 20px);
+            left: 50%;
+            transform: translateY(-50%);
+            display: none;
+            @include breakpoint(small){
+                display: block;
+            }
+        }
+    }
+}
+
+.service-single-item{
+    border: 1px solid $border-color;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 40px;
+    transition: $transition-base;
+    flex-basis: 100%;
+    margin-right: 0px;
+    margin-bottom: 40px;
+    text-align: center;
+    &:nth-child(even){
+        margin-right: 0px;
+    }
+
+    @include breakpoint(small){
+        flex-basis: calc(50% - 20px);
+        padding: 25px 25px;
+        margin-right: 30px;
+    }
+    @include breakpoint(large){
+        flex-basis: calc(50% - 20px);
+        margin-right: 40px;
+        text-align: left;
+        flex-direction: row;
+    }
+    @include breakpoint(xlarge){
+        padding: 60px 60px;
+    }
+
+    .icon{
+        margin-right: 0;
+        margin-bottom: 30px;
+        @include breakpoint(large){
+            margin-bottom: 0px;
+            margin-right: 40px;
+        }
+        @include breakpoint(xlarge){
+            margin-right: 50px;
+        }
+    }
+    .content{
+        
+        .title{
+            font-size: 25px;
+            font-family: $body-font;
+            font-weight: 600;
+            line-height: 1.52;
+            margin-bottom: 20px;
+            text-transform: capitalize;
+            color: $color-dark-red;
+            transition: $transition-base;
+        }
+
+        .btn{
+            position: relative;
+            border-color: $white;
+            border: 1px solid $border-color;
+            font-weight: 500;
+            padding: 8px 30px;
+            background: $white;
+            span{
+                color: #757575;
+            }
+
+            &:hover{
+                border: 1px solid $white;
+               
+                span{
+                    @include text-gradient;
+                }
+            }
+        }
+    }
+
+    
+
+    &:hover{
+        background: $color-gray-white;
+        .content{
+            .title{
+                @include text-gradient;
+            }
+        }
+        
+    }
+}

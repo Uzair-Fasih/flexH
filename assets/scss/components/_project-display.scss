@@ -1,0 +1,42 @@
+/*****************************
+* Component - Project Display
+*****************************/
+
+.project-display-single-item{
+    .content{
+        .title{
+            font-size: 30px;
+            color: $white;
+            margin-bottom: 5px;
+
+            @include breakpoint(xlarge){
+                font-size: 35px;
+            }
+        }
+
+        .catagory{
+            font-size: 12px;
+            color: #fe8403;
+            text-transform: uppercase;
+            margin-bottom: 50px;
+        }
+    }
+}
+
+.projects-gallery-filter-nav{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: -30px;
+
+    .btn{
+        margin-right: 40px;
+        margin-bottom: 30px;
+        box-shadow: none !important;
+    }
+}
+
+.projects-wrapper{
+    margin-top: 40px;
+}

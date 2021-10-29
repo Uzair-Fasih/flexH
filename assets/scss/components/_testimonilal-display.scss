@@ -1,0 +1,290 @@
+/*****************************
+* Component -Testimonial Display
+*****************************/
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+  color: #495057;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+// Testimonial Content
+.testimonial-single-item {
+
+  .content {
+    text-align: center;
+    @include breakpoint(xxlarge){
+      text-align: left;
+    }
+
+    .text {
+      position: relative;
+      font-size: 14px;
+      color: #838383;
+      padding-left: 10px;
+      font-weight: 500;
+
+      @include breakpoint(medium) {
+        font-size: 16px;
+      }
+
+      @include breakpoint(xlarge) {
+        font-size: 22px;
+      }
+
+      &::before {
+        position: absolute;
+        content: "\"";
+        color: $color-dark-orange;
+        left: 0;
+        font-style: italic;
+      }
+
+      &::after {
+        position: absolute;
+        content: "\"";
+        color: $color-dark-orange;
+        right: auto;
+        font-style: italic;
+      }
+
+    }
+
+    .name {
+      margin-top: 0;
+      font-size: 40px;
+      color: $color-dark-red;
+
+      @include breakpoint (xlarge) {
+        margin-top: 44px;
+        font-size: 50px;
+      }
+    }
+
+    .designation {
+      display: inline-block;
+      margin-top: 0px;
+      color: #fe8403;
+      font-weight: 500;
+
+      @include breakpoint(xlarge) {
+        margin-top: 7px;
+      }
+    }
+
+  }
+
+  &.active {
+    .text {
+      animation: fadeInDown 0.5s ease .3s 1 backwards;
+    }
+
+    .name {
+      animation: fadeInDown .5s ease 1s 1 backwards;
+    }
+
+    .designation {
+      animation: fadeInDown .5s ease 1.3s 1 backwards;
+    }
+
+  }
+
+}
+
+// Testimonial Image Tab
+.testimonial-tab{
+  position: relative;
+    max-width: 100%;
+    left: 50;
+    border-bottom: none;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: -10px;
+  @include breakpoint(xxlarge){
+    position: absolute;
+    width: 50%;
+    top: 11%;
+    border-bottom: none;
+    display: block;
+    right: 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  @include breakpoint(xxxlarge){
+    right: 0px;
+  }
+
+}
+
+.textimonial-curve-border{
+
+  @include breakpoint(xxlarge){
+    display: block;
+    position: absolute;
+  }
+
+  .nav-link {
+    position: relative;
+    border: none;
+    padding: 0;
+    width: 70px;
+    margin: 10px;
+    display: inline-block;
+    z-index: 99;
+
+    img {
+      width: 100%;
+      border-radius: 50%;
+    }
+
+    @include breakpoint(xxlarge) {
+      max-width: 100%;
+      position: absolute;
+    }
+
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(.8);
+      background: $linear-gradient-bg;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      border-radius: 50%;
+      transition: $transition-base;
+    }
+
+    &:hover,
+    &.active {
+      &::after {
+        transform: translate(-50%, -50%) scale(1.1);
+      }
+    }
+
+  }
+
+
+  /*Border*/
+  &-outside{
+    background: none;
+    @include breakpoint(xxlarge){
+    width: 100%;
+
+      height: 710px;
+      background-repeat: no-repeat;
+      background-image: url("../images/icons/testimonil-border-outside.svg");
+    }
+  }
+  &-center{
+    background: none;
+    @include breakpoint(xxlarge){
+    width: 60%;
+
+      top: 88px;
+      height: 545px;
+      width: 80%;
+      left: 8%;
+      background-repeat: no-repeat;
+      background-image: url("../images/icons/testimonil-border-center.svg");
+    }
+    @include breakpoint(xxxlarge){
+      width: 63%;
+    }
+  }
+  &-inside{
+    background: none;
+
+    @include breakpoint(xxlarge){
+    width: 40%;
+
+      top: 200px;
+      height: 340px;
+      width: 80%;
+      left: 26%;
+      background-repeat: no-repeat;
+      background-image: url("../images/icons/testimonil-border-inside.svg");
+    }
+    @include breakpoint(xxxlarge){
+      left: 19%;
+      width: 40%;
+    }
+  }
+
+}
+
+.textimonial-curve-border-outside {
+  .nav-link {
+    &:nth-child(1) {
+
+      @include breakpoint(xxlarge){
+        top: 60px;
+        left: 30px;
+      }
+
+    }
+
+    &:nth-child(2) {
+      @include breakpoint(xxlarge){
+        top: 110px;
+        left: 580px;
+      }
+    }
+
+    &:nth-child(3) {
+
+      @include breakpoint(xxlarge){
+        top: 550px;
+        left: 40px;
+      }
+
+    }
+  }
+}
+
+.textimonial-curve-border-center {
+  .nav-link {
+    &:nth-child(1) {
+      @include breakpoint(xxlarge){
+        top: -41px;
+        left: 205px;
+      }
+    }
+
+    &:nth-child(2) {
+      @include breakpoint(xxlarge){
+        top: 409px;
+        left: 415px;
+      }
+    }
+  }
+}
+
+.textimonial-curve-border-inside {
+
+  .nav-link {
+    &:nth-child(1) {
+      @include breakpoint(xxlarge){
+        top: 50px;
+        left: 280px;
+      }
+    }
+
+    &:nth-child(2) {
+      @include breakpoint(xxlarge){
+        bottom: 0px;
+        left: -30px;
+      }
+    }
+  }
+}
+
+.quite-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}

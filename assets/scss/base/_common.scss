@@ -1,0 +1,109 @@
+/*****************************
+* Base - Default
+*****************************/
+/*-- Google Font --*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Teko:wght@300;400;500;600;700&display=swap');
+
+/***********************************
+Fonts Family:
+------------ 
+font-family: 'Poppins', sans-serif;
+font-family: 'Teko', sans-serif;
+
+**************************************/
+
+/*-- Common Style --*/
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: $body-font;
+    font-weight: $font-weight-normal;
+    font-style: normal;
+    line-height: $line-height-lg;
+    position: relative;
+    visibility: visible;
+    background: $body-bg;
+    color: $body-color;
+
+    &[dir="rtl"] {
+        text-align: right;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $heading-font;
+}
+
+
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: $body-color;
+    text-decoration: none;
+    transition: $transition-base;
+    outline: none;
+}
+
+input,
+button,
+a {
+    border: none;
+    outline: none !important;
+    background: none;
+    box-shadow: none;
+}
+
+p:last-child{
+    margin-bottom: 0;
+}
+
+input, textarea {
+    width: 100%;
+}
+
+.orange-text-marker {
+    &-dark {
+        color: $color-dark-orange;
+    }
+
+    &-light {
+        color: $color-light-orange;
+    }
+}
+
+.text-gradient {
+    background: $linear-gradient-bg;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.border-bottom-thick{
+    border-bottom: 2px solid $border-color;
+}
+
+
+
+@import "animation";
+@import "slider-customize";
+@import "utility/section";
+@import "utility/measurement";
+@import "utility/other-components";

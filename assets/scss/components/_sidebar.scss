@@ -1,0 +1,82 @@
+/*****************************
+Components - Sidebar Widget
+*****************************/
+.siderbar-section{
+    margin-top: 60px;
+    @include breakpoint(medium){
+        margin-top: 80px;
+    }
+    @include breakpoint(large){
+        margin-top: 0;
+    }
+}
+.sidebar-single-widget{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    &:first-child{
+        margin-top: 0px;
+    }
+    &:last-child{
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+}
+.sidebar-title{
+    font-size: 26px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-weight: 700;
+    padding-bottom: 15px;
+    position: relative;
+    color: $color-dark-red;
+    
+    &::after{
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 3px;
+        left: 0;
+        bottom: -1.5px;
+        background: $linear-gradient-bg;
+    }
+}
+
+.sidebar-banner {
+    margin: 0 auto;
+    display: block;
+}
+
+.default-search-style{
+    position: relative
+}
+
+.default-search-style-input-box{
+    width: 100%;
+    background: $white;
+    border-radius: 10px;
+    padding: 15px 30px;
+    position: relative;
+    border: 1px solid $color-dark-red;
+    color: $color-dark-red;
+    padding-right: 80px;
+    transition: $transition-base;
+
+    &:focus{
+        border-color: $color-light-orange;
+    }
+
+}
+
+.default-search-style-input-btn{
+    position: absolute;
+    top: 0%;
+    right: 0;
+    line-height: 60px;
+    font-size: 22px;
+    width: 60px;
+    height: 60px;
+}
+
+@import "sidebar-widgets/taglink";
+@import "sidebar-widgets/accordian";

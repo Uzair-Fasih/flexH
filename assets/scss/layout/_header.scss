@@ -1,0 +1,175 @@
+/*****************************
+* Layout - Header
+*****************************/
+
+.header-section{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+
+/*Header Top*/
+.header-top{
+    background: $color-secondary;
+    color: $color-light-white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    P{
+        margin-bottom: 0;
+    }
+
+    &-left{
+        position: relative;
+        padding-left: 50px;
+
+        &::after{
+            position: absolute;
+            content: "";
+            height: 1px;
+            width: 35px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: $color-light-white;
+        }
+    }
+
+    &-right{
+        .text{
+            color: $color-dark-orange;
+            padding-right: 5px;
+        }
+    }
+}
+
+
+/*Header Bottom*/
+
+.header-bottom{
+    background: rgba($color-dark-red, .05);
+
+    /*Header Logo*/
+    .logo{
+        width: 190px;
+        overflow: hidden;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    /*Header Menu*/
+    .header-nav{
+        display: flex;
+        & > li > a{
+            padding-right: 20px;
+            padding-left: 20px;
+            line-height: 100px;
+            display: inline-block;
+            color: $white;
+            position: relative;
+            @include breakpoint(xlarge){
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+            &:hover{
+                color: $color-secondary;
+            }
+
+            &::after{
+                position: absolute;
+                content: "";
+                top: 0;
+                left: auto;
+                right: 0;
+                width: 0%;
+                height: 100%;
+                background: rgba($color-secondary, 0.07);
+                transition: $transition-base;
+            }
+
+            &:hover::after{
+                left: 0;
+                width: 100%;
+            }
+            
+        }
+
+        .has-dropdown{
+            position:  relative;
+            
+            &:hover .submenu{
+                visibility: visible;
+                opacity: 1;
+                transform: translateY(0) scaleY(1);
+            }
+        }
+
+        .submenu{
+            position: absolute;
+            top: 100%;
+            left: 0%;
+            width: 240px;
+            background: $linear-gradient-bg;
+            border-radius: 0 0 5px 5px;
+            visibility: hidden;
+            opacity: 0;
+            transition: transform 0.1s cubic-bezier(0.2, 0, 0.2, 1), opacity 0.2s cubic-bezier(0.2, 0, 0.2, 1);
+            transform: translateY(0px) scaleY(0.2);
+            transform-origin: top;
+            transition: $transition-base;
+            z-index: 9;
+            a{
+                padding: 10px 25px;
+                display: block;
+                position: relative;
+                color: $white;
+
+                &::after{
+                    position: absolute;
+                    content: "";
+                    top: 0;
+                    left: auto;
+                    right: 0;
+                    width: 0%;
+                    height: 100%;
+                    background: rgba($color-secondary, 0.07);
+                    transition: $transition-base;
+                }
+    
+                &:hover{
+                    &::after{
+                        left: 0;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    /*Header Social Link*/
+    
+}
+
+/*Main Menu Style*/
+.sticky-header.sticky {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    top: 0;
+    background: $color-primary;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    animation-name: fadeInDown;
+    animation-duration: 900ms;
+    animation-timing-function: cubic-bezier(0.2, 1, 0.22, 1);
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    border-bottom: 0;
+}

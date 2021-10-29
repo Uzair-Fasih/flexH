@@ -1,0 +1,194 @@
+/* Section CSS*/
+.section-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+
+    @include breakpoint(medium) {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    @include breakpoint(large) {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+    @include breakpoint(xlarge) {
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+
+    @include breakpoint(xxlarge) {
+        padding-left: 163px;
+        padding-right: 163px;
+    }
+}
+
+
+.section-top-space {
+    margin-top: 80px;
+
+    @include breakpoint(small) {
+        margin-top: 100px;
+    }
+
+    @include breakpoint(medium) {
+        margin-top: 120px;
+    }
+
+    @include breakpoint(large) {
+        margin-top: 160px;
+    }
+}
+
+.section-inner-gap {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    @include breakpoint(medium) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    @include breakpoint(medium) {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    @include breakpoint(large) {
+        padding-top: 160px;
+        padding-bottom: 160px;
+    }
+}
+
+.section-inner-bg {
+    background: $color-gray-white;
+    z-index: 0;
+}
+
+.section-content-space {
+    margin-bottom: 40px;
+
+    @include breakpoint(medium) {
+        margin-bottom: 60px;
+    }
+    @include breakpoint(large) {
+        margin-bottom: 80px;
+    }
+}
+
+.section-content-space-small {
+    margin-bottom: 30px;
+
+    @include breakpoint(large) {
+        margin-bottom: 40px;
+    }
+}
+
+.section-content {
+    margin-top: -7px;
+    text-align: center;
+
+    @include breakpoint(small){
+        text-align: left;
+    }
+    .title-tag {
+        font-size: 22px;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        letter-spacing: .8px;
+        font-weight: 600;
+    }
+
+    .title {
+        color: $color-dark-red;
+        font-size: 55px;
+        text-transform: uppercase;
+
+        @include breakpoint(medium) {
+            font-size: 65px;
+        }
+
+        @include breakpoint(large) {
+            font-size: 70px;
+        }
+
+        @include breakpoint(xlarge) {
+            font-size: 85px;
+        }
+
+    }
+
+    .title-dash {
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 5px;
+            background: $linear-gradient-bg;
+
+            @include breakpoint(xlarge) {
+                bottom: -25px;
+            }
+
+            @include breakpoint(xlarge) {
+                left: 0;
+                transform: translateX(0%);
+            }
+        }
+    }
+
+    .sub-title {
+        color: $color-dark-red;
+        font-size: 40px;
+        text-transform: uppercase;
+
+        @include breakpoint(medium) {
+            font-size: 46px;
+        }
+
+        @include breakpoint(large) {
+            font-size: 50px;
+        }
+
+        @include breakpoint(xlarge) {
+            font-size: 60px;
+        }
+    }
+
+    p {
+        font-size: 16px;
+
+        @include breakpoint(medium) {
+            font-size: 18px;
+        }
+
+        @include breakpoint(large) {
+            font-size: 20px;
+        }
+
+        @include breakpoint(xlarge) {
+            font-size: 23px;
+        }
+
+        color: #757575;
+    }
+
+    .btn {
+        margin-top: 30px;
+
+        @include breakpoint(large) {
+            margin-top: 50px;
+        }
+
+        @include breakpoint(xlarge) {
+            margin-top: 70px;
+        }
+    }
+
+}

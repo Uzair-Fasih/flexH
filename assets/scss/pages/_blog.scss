@@ -1,0 +1,59 @@
+/*****************************
+* Pages - Blog
+*****************************/
+.blog-details-box-wrapper{
+
+    .default-content{
+        border-bottom: 2px solid $color-gray-white;
+        padding-bottom: 60px;
+    }
+
+    .data-nav-arrow-box{
+        margin-top: 50px;
+    }
+    
+}
+
+.blog-quote{
+    border-radius: 35px;
+    padding: 40px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   position: relative;
+
+   @include breakpoint(small){
+    padding: 50px 50px;
+   }
+   @include breakpoint(large){
+    padding: 61px 60px;
+   }
+   @include breakpoint(xlarge){
+    padding: 61px 70px;
+   }
+
+   &::after{
+       position: absolute;
+       content: "";
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       background-image: url("../images/icons/quotation.png");
+       width: 190px;
+       height: 175px;
+   }
+}
+
+.blog-quote-text{
+    font-size: 28px;
+    line-height: 1.38;
+    font-weight: 400;
+    margin-bottom: -5px;
+}
+
+
+.blog-section-wrapper{
+    .blog-feed-slider-single-item{
+        margin-bottom: 60px;
+    }
+}

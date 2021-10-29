@@ -1,0 +1,140 @@
+/*****************************
+* Component - Promo Display
+*****************************/
+.promo-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    @include breakpoint(large){
+        flex-direction: row;
+    }
+}
+
+.promo-single-item{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-bottom: 1px solid $border-color;
+    border-right: none;
+    height: 100%;
+    &:last-child{
+        border-right:none;
+    }
+    
+
+    @include breakpoint(medium){
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @include breakpoint(large){
+        padding-left: 30px;
+        padding-right: 30px;
+        border-right: 1px solid $border-color;
+    }
+
+    @include breakpoint(xxxlarge){
+        padding-top: 80px;
+        padding-bottom: 80px;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        padding-left: 70px;
+        padding-right: 70px;
+        border-right: 1px solid $border-color;
+    }
+
+    .icon{
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background: $white;
+        margin-right: 0px;
+        margin-bottom: 40px;
+        @include breakpoint(xxxlarge){
+            margin-bottom: 0;
+            margin-right: 35px;
+        }
+
+        img{
+            padding: 25px;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .content{
+        width: 100%;
+        @include breakpoint(xxxlarge){
+            width: calc(100% - 135px);
+        }
+
+        & *{
+            transition: $transition-base;
+        }
+        .title{
+            font-family: $body-font;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: $color-dark-red;
+            
+        }
+    }
+
+    .box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 40px;
+        background: $color-gray-white;
+        border-radius: 25px;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        transition: $transition-base;
+
+
+        &::after{
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: $linear-gradient-bg;
+            transform: scale(.985);
+            transition: $transition-base;
+            z-index: -1;
+            border-radius: 25px;
+            opacity: 0;
+            visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        &:hover{
+           * {color: $white;} 
+            &::after{
+                opacity: 1;
+                visibility: visible;
+                transform: scale(1);
+            }
+        }
+        
+        @include breakpoint(xxxlarge){
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 50px 45px;
+            text-align: left;
+        }
+    }
+    
+    
+
+
+    
+}

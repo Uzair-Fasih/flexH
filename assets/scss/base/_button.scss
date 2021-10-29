@@ -1,0 +1,145 @@
+/*****************************
+* Base - Button
+*****************************/
+
+.btn{
+    color: $white;
+    border-radius: 35px;
+    border: none;
+    font-size: 15px;
+    outline: none;
+    font-weight: 400;
+    transition: $transition-base;
+    position: relative;
+    overflow: hidden;
+    &:active:focus,
+    &:focus{
+        box-shadow: none;
+    }
+
+    &-lg{
+
+        padding: 15px 20px;
+        @include breakpoint(xlarge){
+            padding: 17.5px 45px;
+        }
+        @include breakpoint(xxlarge){
+            padding: 22.5px 50px;
+        }
+
+        i{
+            font-size: 20px;
+        }
+    }
+
+    &-primary{
+        background: $linear-gradient-bg;
+        z-index: 1;
+        overflow: hidden;
+        display: inline-flex;
+        align-items: center;
+        &::after{
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:  $linear-gradient-bg-alt;
+            transform: translateY(0px) rotate(0deg);
+            opacity: 0;
+            transition: all .5s ease;
+            z-index: -1;
+        }
+        &:hover{
+            color: $color-secondary;
+            box-shadow: 1px 1px 10px rgba($black, .3);
+            &::after{
+                opacity: .45;
+                transform: translateY(5px) rotate(-45deg);
+            }
+            
+        }
+        
+    }
+
+    &-secondary{
+        background: $linear-gradient-bg;
+        color: $color-bold-red;
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        &::after{
+            position: absolute;
+            content: "";
+            width: calc(100% - 4px);
+            height: calc(100% - 4px);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 35px;
+            z-index: -1;
+        }
+
+        &-white{
+            &::after{
+                background: $white;
+            }
+        }
+        &-gray{
+            &::after{
+                background: $color-gray-white;
+            }
+        }
+
+        &:hover::after{
+            background: $linear-gradient-bg;
+        }
+    }
+
+    &-outline-primary{
+        border: 1px solid $border-color;
+        color: #757575;
+        font-weight: 500;
+        padding: 8px 30px;
+        &:hover{
+            border-color: $white;
+            background: $white;
+            color: #757575;
+        }
+    }
+
+    &-outline-secondary{
+        border: 1px solid $border-color;
+        color: #757575;
+        font-weight: 500;
+        padding: 8px 30px;
+        background: $white;
+        &.active,
+        &:hover{
+            border-color: $white;
+            background: $linear-gradient-bg;
+            color: $white;
+        }
+    }
+
+    .btn-check:focus + &,
+    &:focus {
+    outline: 0;
+    box-shadow: none;
+    }
+
+    .btn-check:checked + &,
+    .btn-check:active + &,
+    &:active,
+    &.active {
+    @include box-shadow($btn-active-box-shadow);
+
+    &:focus {
+        @include box-shadow(none, $btn-active-box-shadow);
+    }
+    }
+}
+
+
+

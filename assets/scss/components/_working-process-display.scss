@@ -1,0 +1,234 @@
+/***************************************
+* Component - Working Progress Display
+****************************************/
+
+.video-wrapper {
+    margin-top: 80px;
+
+    @include breakpoint(large) {
+        margin-top: 0;
+    }
+}
+
+.working-process-shape {
+    overflow: hidden;
+    position: absolute;
+    width: 873px;
+    height: 873px;
+    border-radius: 50%;
+    background: $linear-gradient-bg-alt;
+    opacity: .05;
+    right: 0;
+    bottom: -45%;
+    right: -8%;
+}
+
+.working-process-display-wrapper {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include breakpoint(medium) {
+        display: block;
+        margin-bottom: 237px;
+    }
+
+}
+
+.working-process-single-item {
+    position: static;
+    margin-top: 80px;
+    
+
+    &.pos-absolute{
+        @include breakpoint(medium) {
+            position: absolute;
+            margin-top: 0px;
+        }
+    
+        &:nth-child(1) {
+            top: 50px;
+            left: 0%;
+    
+            @include breakpoint(large) {
+                top: 96px;
+            }
+        }
+    
+        &:nth-child(2) {
+            top: 50px;
+            left: 50%;
+            transform: translateX(0%);
+    
+            @include breakpoint(medium) {
+                transform: translateX(-50%);
+            }
+    
+            @include breakpoint(large) {
+                top: 20px;
+            }
+    
+        }
+    
+        &:nth-child(3) {
+            top: 50px;
+            right: 0%;
+    
+            @include breakpoint(large) {
+                top: -79px;
+            }
+    
+    
+            @include breakpoint(xlarge) {
+                top: -163px;
+            }
+    }
+
+    
+    }
+
+    .icon {
+        background: $white;
+        background: $linear-gradient-bg;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translate(-50%);
+        overflow: hidden;
+        z-index: 1;
+        text-align: center;
+        line-height: 120px;
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: calc(100% - 2px);
+            height: calc(100% - 2px);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: $white;
+            border-radius: 50%;
+            z-index: -1;
+        }
+    }
+
+    .box {
+
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        background: $white;
+        text-align: center;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(.9);
+            background: $linear-gradient-bg;
+            transition: all .5s ease;
+            opacity: 0;
+            visibility: hidden;
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+       & .title {
+            font-size: 32px;
+            font-weight: 600;
+            color: $color-dark-red;
+            text-transform: uppercase;
+            transition: $transition-base;
+        }
+    }
+
+    &:hover .box {
+        .title {
+            color: $white;
+        }
+
+        &::after {
+            visibility: visible;
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+}
+
+
+.working-process-display-arrow {
+    position: absolute;
+
+    &.arrow-1 {
+        display: none;
+
+        @include breakpoint(large) {
+            display: block;
+            top: 120px;
+            left: 225px;
+        }
+
+        @include breakpoint(xlarge) {
+            top: 120px;
+            left: 272px;
+        }
+
+        @include breakpoint(xxlarge) {
+            top: 120px;
+            left: 315px;
+        }
+
+        @include breakpoint(xxxlarge) {
+            top: 120px;
+            left: 315px;
+        }
+    }
+
+    &.arrow-2 {
+        display: none;
+
+        @include breakpoint(large) {
+            display: block;
+            top: 49px;
+            left: 594px;
+        }
+
+        @include breakpoint(xlarge) {
+            top: 49px;
+            left: 745px;
+        }
+
+        @include breakpoint(xxlarge) {
+            top: 49px;
+            left: 866px;
+        }
+
+        @include breakpoint(xxxlarge) {
+            top: 49px;
+            left: 866px;
+        }
+    }
+}
+
+
+.video-btn{
+    .text{
+        color: $color-dark-red;
+    }
+}

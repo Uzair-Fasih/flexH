@@ -1,0 +1,48 @@
+.footer-bottom {
+    background: $color-bold-red;
+    padding-top: 21px;
+    padding-bottom: 21px;
+}
+
+.footer-copyright{
+    color: $white;
+
+    a, i{
+        color: #fe8403;
+    }
+}
+
+.footer-soacial{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    li{
+       margin-right: 30px;
+       position: relative;
+
+       &::after{
+            content: "|";
+            position: absolute;
+            display: block;
+            color: $white;
+            top: 50%;
+            transform: translateY(-50%);
+            left: calc(100% + 15px);
+       }
+
+       &:last-child{
+           margin-right: 0;
+           &::after{
+               display: none;
+           }
+       }
+    }
+
+    a{
+        color: $white;
+        text-transform: capitalize;
+        &:hover{
+            color: #fe8403;;
+        }
+    }
+}

@@ -1,0 +1,105 @@
+/*****************************
+* Pages - Service
+*****************************/
+.working-process-section > {
+     .content > {
+         .title{
+             font-size: 40px;
+             color: $color-tertiarie;
+             text-transform: uppercase;
+
+             @include breakpoint(large){
+                 font-size: 60px;
+             }
+         }
+     }
+}
+
+
+.service-content-wrapper{
+    & > .content{
+        & > .title-tag{
+            text-transform: uppercase;
+        }
+       & > .title{
+            color: $color-dark-red;
+            font-size: 40px;
+            margin-bottom: 27px;
+            text-transform: capitalize;
+
+            @include breakpoint(large){
+                font-size: 60px;
+            }
+        }
+    }
+
+    .image-group{
+        display: flex;
+        justify-content: space-between;
+        .image{
+            width: 100%;
+            overflow: hidden;
+            margin-right: 40px;
+            @include breakpoint(medium){
+                margin-right: 60px;
+            }
+            @include breakpoint(xlarge){
+                margin-right: 90px;
+            }
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+        img{
+            width: 100%;
+        }
+    }
+    
+}
+
+.working-process-section{
+    padding-left: 50px;
+    padding-right: 50px;
+
+    @include breakpoint(large){
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+}
+
+.working-process-arrow{
+    margin-top: 60px;
+}
+
+
+.download-wrapper{
+    border-top: 4px solid $color-gray-white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .content > {
+        .title{
+            font-size: 40px;
+             color: $color-tertiarie;
+             text-transform: uppercase;
+
+             @include breakpoint(large){
+                 font-size: 60px;
+             }
+        }
+    }
+
+    .download-links {
+        a{
+            margin-bottom: 30px;
+            margin-right: 20px;
+            @include breakpoint(small){
+                margin-bottom: 0;
+            }
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+}

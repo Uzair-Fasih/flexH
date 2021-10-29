@@ -1,0 +1,32 @@
+/*****************************
+* Layout - Footer
+*****************************/
+
+.footer-bg {
+    background-color: $color-dark-red;
+    position: relative;
+    z-index: 11;
+    &::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        background: url(../images/background/footer-bg.png);
+        bottom: calc(0% + 99px);
+        height: 100%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        z-index: -1;
+       
+        @include breakpoint(medium){
+            bottom: calc(0% + 54px);
+        }
+        
+    }
+}
+
+
+@import "footer/footer-top";
+@import "footer/footer-center";
+@import "footer/footer-bottom";
+
