@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("../../fonts/icomoon/icomoon.eot?dzra4c");
+  src: url("../../fonts/icomoon/icomoon.eot?dzra4c#iefix")
+      format("embedded-opentype"),
+    url("../../fonts/icomoon/icomoon.ttf?dzra4c") format("truetype"),
+    url("../../fonts/icomoon/icomoon.woff?dzra4c") format("woff"),
+    url("../../fonts/icomoon/icomoon.svg?dzra4c#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="ico-"],
+[class*=" ico-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Custom =========== */
+  background: linear-gradient(to top, #dd4454 0%, #dd9044 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
+}
+
+.ico-refinery:before {
+  content: "\e900";
+}
+.ico-tank:before {
+  content: "\e901";
+}
+.ico-oil:before {
+  content: "\e902";
+}
+.ico-pipe:before {
+  content: "\e903";
+}
+.ico-oil-tanker:before {
+  content: "\e904";
+}
+.ico-extraction:before {
+  content: "\e905";
+}
+.ico-power-plant:before {
+  content: "\e906";
+}
+.ico-electric-factory:before {
+  content: "\e907";
+}
+.ico-water-factory:before {
+  content: "\e908";
+}
+.ico-location:before {
+  content: "\e909";
+}
+.ico-call:before {
+  content: "\e90a";
+}
+.ico-email:before {
+  content: "\e90b";
+}
