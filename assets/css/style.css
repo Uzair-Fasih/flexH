@@ -18793,7 +18793,7 @@ Components - Sidebar Widget
 * Layout - Footer
 *****************************/
 .footer-bg {
-  background-color: #301514;
+  background-color: #c9f1fe;
   position: relative;
   z-index: 11;
 }
@@ -18801,7 +18801,7 @@ Components - Sidebar Widget
   content: "";
   position: absolute;
   width: 100%;
-  background: url(../images/background/footer-bg.png);
+  background: url(../images/background/footer-bg-final.png);
   bottom: calc(0% + 99px);
   height: 100%;
   background-size: 100%;
@@ -18818,10 +18818,10 @@ Components - Sidebar Widget
 .footer-top {
   position: relative;
   z-index: 1;
-  border-bottom: 1px solid #392120;
+  border-bottom: 1px solid #ddd;;
 }
 .footer-top .bg-color-bold-red {
-  background: #25100f;
+  /* background: #25100f; */
   position: absolute;
   width: calc(100% - 600px);
   height: 100%;
@@ -18904,7 +18904,7 @@ Components - Sidebar Widget
 }
 .footer-top-wrapper .newsletter .content .sub-title {
   font-size: 40px;
-  color: #fff;
+  color: #301514;
 }
 .footer-top-wrapper .newsletter-form {
   width: 100%;
@@ -18978,7 +18978,7 @@ Components - Sidebar Widget
 .footer-widget-single-item .title {
   font-size: 35px;
   font-weight: 500;
-  color: #fff;
+  color: #fe8403;
   margin-bottom: 47px;
   text-transform: uppercase;
 }
@@ -18996,7 +18996,7 @@ Components - Sidebar Widget
 }
 .footer-about .text,
 .footer-about .text a {
-  color: #cbcbcb;
+  color: #252d31;
 }
 .footer-about .text-marker {
   color: #fe8403;
@@ -19066,7 +19066,7 @@ Components - Sidebar Widget
 .footer-nav a {
   position: relative;
   display: inline-block;
-  color: #cbcbcb;
+  color: #252d31;
   margin-bottom: 12px;
   padding-left: 33px;
 }
