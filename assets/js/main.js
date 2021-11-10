@@ -102,8 +102,8 @@
     watchSlidesProgress: true,
     loop: true,
     autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
+      delay: 10000,
+      disableOnInteraction: true,
     },
     pauseOnMouseEnter: true,
     pagination: {
