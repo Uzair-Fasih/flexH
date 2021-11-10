@@ -16318,6 +16318,7 @@ textarea {
   z-index: 1;
   overflow: hidden;
   transition: all 0.5s ease;
+  height: 100%;
 }
 .promo-single-item .box::after {
   position: absolute;
@@ -18921,7 +18922,7 @@ Components - Sidebar Widget
   border-bottom: 1px solid #392120;
 }
 .footer-top .bg-color-bold-red {
-  background: #25100f;
+  /* background: #25100f; */
   position: absolute;
   width: calc(100% - 600px);
   height: 100%;
