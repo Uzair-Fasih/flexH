@@ -109,10 +109,10 @@
     speed: 2500,
     watchSlidesProgress: true,
     loop: true,
-    // autoplay: {
-    //   delay: 10000,
-    //   disableOnInteraction: true,
-    // },
+    autoplay: {
+      delay: 10000,
+      disableOnInteraction: true,
+    },
     pauseOnMouseEnter: true,
     pagination: {
       el: ".swiper-pagination",
