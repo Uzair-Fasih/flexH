@@ -93,6 +93,14 @@
    ***********************************************/
   $("select").niceSelect();
 
+  const playSliderVideo = (idx) => {
+    const slides = document.querySelectorAll(".slideshow > video");
+    slides.forEach((slide, index) => {
+      if (index == idx) slide.play();
+      else slide.play();
+    });
+  };
+
   /*************************
    *   Hero Slider Active
    **************************/
@@ -101,10 +109,10 @@
     speed: 2500,
     watchSlidesProgress: true,
     loop: true,
-    autoplay: {
-      delay: 10000,
-      disableOnInteraction: true,
-    },
+    // autoplay: {
+    //   delay: 10000,
+    //   disableOnInteraction: true,
+    // },
     pauseOnMouseEnter: true,
     pagination: {
       el: ".swiper-pagination",
@@ -113,6 +121,14 @@
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
+    },
+    on: {
+      init: function () {
+        playSliderVideo(this.activeIndex - 1);
+      },
+      slideChange: function () {
+        playSliderVideo(this.activeIndex - 1);
+      },
     },
   });
 

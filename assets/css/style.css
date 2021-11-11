@@ -19627,6 +19627,17 @@ Components - Sidebar Widget
   position: relative;
 }
 
+.hero-bg video {
+  min-width: 100%;
+  max-height: calc(100vh * 1.25);
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: #000;
+}
+
 .hero-bg::before {
   content: '';
   position: absolute;
