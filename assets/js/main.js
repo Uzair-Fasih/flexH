@@ -96,8 +96,10 @@
   const playSliderVideo = (idx) => {
     const slides = document.querySelectorAll(".slideshow > video");
     slides.forEach((slide, index) => {
-      if (index == idx) slide.play();
-      else slide.play();
+      if (slide.readyState >= 3) {
+        if (index == idx) slide.play();
+        else slide.pause();
+      }
     });
   };
 
@@ -109,10 +111,6 @@
     speed: 2500,
     watchSlidesProgress: true,
     loop: true,
-    autoplay: {
-      delay: 10000,
-      disableOnInteraction: true,
-    },
     pauseOnMouseEnter: true,
     pagination: {
       el: ".swiper-pagination",
@@ -124,10 +122,10 @@
     },
     on: {
       init: function () {
-        playSliderVideo(this.activeIndex - 1);
+        playSliderVideo(this.activeIndex);
       },
       slideChange: function () {
-        playSliderVideo(this.activeIndex - 1);
+        playSliderVideo(this.activeIndex);
       },
     },
   });
