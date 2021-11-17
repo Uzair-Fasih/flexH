@@ -716,6 +716,11 @@ progress {
     max-width: 1320px;
   }
 }
+.header-container {
+  padding-left: 10%;
+  padding-right: 10%;
+  max-width: initial;
+}
 .row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
@@ -15955,7 +15960,22 @@ html {
 }
 .btn-lg i,
 .btn-group-lg > .btn i {
-  font-size: 20px;
+  font-size: 14px;
+  margin-right: 1rem;
+}
+.video-btn {
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 700px) {
+  .video-btn {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  .video-play-btn {
+    margin-top: 1rem;
+    margin-left: 1.75rem;
+  }
 }
 .btn-primary {
   background: linear-gradient(90deg, #f3722e 0%, #ff9900 100%);
@@ -16214,7 +16234,7 @@ html {
 }
 
 .hero-content ul li {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   font-weight: 200;
 }
 
